@@ -4,9 +4,9 @@
 @section('content')
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
-  <div class="col-md-4">
+  <div class="col-md-8">
     <h2>Redigera {{ $tablet->title }}</h2>
 
     <form action="/tablets/{{ $tablet->id }}" method="post">
@@ -32,10 +32,10 @@
       <label for="image">Bild</label>
       <input type="text" class="form-control" id="image" name="image" value="{{ $tablet->image }}" placeholder="{{ $tablet->image }}">
     </div>
-    <input type="submit" value="Spara product" class="btn btn-success">
+    <input type="submit" value="Spara surfplatta" class="btn btn-success">
   </form>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
 </div>
 

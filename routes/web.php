@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 //Requires user to be logged in to access pages
 Route::group(["middleware" => "auth"], function () {
   Route::resource('stores', 'StoresController', ['except' => [
@@ -31,7 +33,7 @@ Route::group(["middleware" => "auth"], function () {
   Route::resource('tablets', 'TabletsController', ['except' => [
       'show', 'index', 'start'
   ]]);
-  Route::resource('computers', 'ComputerssController', ['except' => [
+  Route::resource('computers', 'ComputersController', ['except' => [
       'show', 'index', 'start'
   ]]);
 });

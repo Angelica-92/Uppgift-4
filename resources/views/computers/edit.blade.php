@@ -32,7 +32,7 @@
       <label for="image">Bild</label>
       <input type="text" class="form-control" id="image" name="image" value="{{ $computer->image }}" placeholder="{{ $computer->image }}">
     </div>
-    <input type="submit" value="Spara product" class="btn btn-success">
+    <input type="submit" value="Spara dator" class="btn btn-success">
   </form>
   </div>
   <div class="col-md-4">

@@ -4,9 +4,10 @@
 @section('content')
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
-  <div class="col-md-4">
+  <div class="col-md-8">
+    <h2>Skapa en surfplattor</h2>
     <form action="/tablets" method="post">
       {{ csrf_field() }}
       <div class="form-group">
@@ -31,10 +32,10 @@
       </div>
       <br>
       <br>
-      <input type="submit" value="Spara product" class="btn btn-success" style="float:right;"><p></p>
+      <input type="submit" value="Spara surfplatta" class="btn btn-success" style="float:right;"><p></p>
     </form>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
 </div>
 

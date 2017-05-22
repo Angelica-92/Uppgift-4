@@ -3,19 +3,18 @@
   letter-spacing: 2px;
   margin: 5px 0px 5px 8px; !important
 }
+.color {
+  color:white;
+}
 .header > li > a:hover {
   color: #1a8cff;
 }
 
-a {
-  text-decoration: none;
-}
+
 .move {
   margin-left: 120px; !important
 }
-.moveLeft {
-    margin-left: 450px;
-}
+
 
 .nav > .open > a:visited {
   color: #595959;
@@ -45,6 +44,27 @@ li > a:hover {
   color: #595959; !important
 
 }
-#bold {
+
+.media {
+  height: 220px;
+  padding-top: 10px;
+  width: 240px;
+  box-shadow: 0.4px 0.5px 0.4px 0.6px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 10px;
+}
+
+.title {
   font-weight: bold;
+  font-size:17px;
+  text-align: center;
+  color: #333333;
+}
+
+.noDecoration {
+  text-decoration: none; !important
+}
+
+.space {
+  height: 100px;
 }

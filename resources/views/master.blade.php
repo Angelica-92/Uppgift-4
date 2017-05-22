@@ -16,6 +16,7 @@
         <nav class="navColor navbar">
 
                 <ul class="nav navbar-nav">
+                  <li class ="move"><a class="color" href="/">Start</a></li>
                   <li class="dropdown move">
                     <a class="dropdown-toggle navColor" data-toggle="dropdown" href="#">Visa alla
                       <span class="caret"></span></a>
@@ -26,7 +27,18 @@
                       </ul>
                     </li>
 
-                    <li class="moveLeft"><a class="navColor" href="/login" style="margin-left: 600px;"><span class="glyphicon glyphicon-home"></span></a></li>
+                    <li class="dropdown move">
+                      <a class="dropdown-toggle navColor" data-toggle="dropdown" href="#">Skapa
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="/mobiles/create">Mobil</a></li>
+                          <li><a href="/tablets/create">Surfplatta</a></li>
+                          <li><a href="/computers/create">Dator</a></li>
+                        </ul>
+                      </li>
+                      <li class ="move"><a class="color" href="/stores">Affärer</a></li>
+
+                    <li class="moveLeft"><a class="navColor" href="/login" style="margin-left: 400px;"><span class="glyphicon glyphicon-home"></span></a></li>
                 </ul>
 
             </nav>
@@ -34,12 +46,12 @@
           </div>
       <div class="container">
       <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
 
          @yield('content')
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-1"></div>
     </div>
     </div>
   </body>

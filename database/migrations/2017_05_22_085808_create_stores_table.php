@@ -13,8 +13,14 @@ class CreateStoresTable extends Migration
      */
     public function up()
     {
-        //
+      schema::create('stores',function(Blueprint $table) {
+        $table->increments('id');
+        $table->text('name');
+        $table->text('city');
+        $table->timestamps();
+          });
     }
+
 
     /**
      * Reverse the migrations.
@@ -23,6 +29,6 @@ class CreateStoresTable extends Migration
      */
     public function down()
     {
-        //
+        schema::drop('stores');
     }
 }

@@ -13,7 +13,15 @@ class CreateReviewsTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create("reviews", function (Blueprint $table){
+          $table->increments("id");
+          $table->string("name");
+          $table->string("comment");
+          $table->integer("grade");
+          $table->integer("product_id");
+          $table->timestamps();
+
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class CreateReviewsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop("reviews");
     }
 }

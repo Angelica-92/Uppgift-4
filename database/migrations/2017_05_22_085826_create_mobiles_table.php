@@ -13,7 +13,15 @@ class CreateMobilesTable extends Migration
      */
     public function up()
     {
-        //
+      schema::create('mobiles',function(Blueprint $table) {
+      $table->increments('id');
+      $table->text('title');
+      $table->text('brand');
+      $table->text('image');
+      $table->text('description');
+      $table->float('price');
+      $table->timestamps();
+    });
     }
 
     /**
@@ -23,6 +31,6 @@ class CreateMobilesTable extends Migration
      */
     public function down()
     {
-        //
+        schema::drop('mobiles');
     }
 }

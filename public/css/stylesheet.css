@@ -1,9 +1,22 @@
-
-#brand {
-  font-size: 22px;
+.header {
+  color: #1a8cff;
   letter-spacing: 2px;
-  color: #00b300;
+  margin: 5px 0px 5px 8px; !important
 }
+.header > li > a:hover {
+  color: #1a8cff;
+}
+
+a {
+  text-decoration: none;
+}
+.move {
+  margin-left: 120px; !important
+}
+.moveLeft {
+    margin-left: 450px;
+}
+
 .nav > .open > a:visited {
   color: #595959;
 }

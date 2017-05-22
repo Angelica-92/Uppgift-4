@@ -14,7 +14,10 @@ class MobilesController extends Controller
      */
     public function index()
     {
-        return view("products.index");
+      $mobiles = Mobile::all();
+      return view("products.index", [
+        "mobiles" => $mobiles,
+      ]);
     }
 
     /**

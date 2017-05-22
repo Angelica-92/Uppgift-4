@@ -11,6 +11,33 @@ class TabletsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+
+      DB::table('tablets')->insert([
+
+      [
+       "title" => "Ipad 4",
+       "Brand" => "Apple",
+       "image" => "https://www.bhphotovideo.com/images/images2500x2500/apple_mk9n2ll_a_128gb_ipad_mini_4_1185478.jpg",
+       "description" => "a good tablet, like iphone but bigger",
+       "price" => "1999"
+      ],
+      [
+        "title" => "8000 nasa super secret",
+        "Brand" => "Windows",
+        "image" => "http://www.extremetech.com/wp-content/uploads/2012/11/surface-tablet-running-windows-phone-81.jpg",
+        "description" => "winwows upgraded super model",
+        "price" => "21999"
+      ],
+      [
+        "title" => "Galaxy 200",
+        "Brand" => "Samsung",
+        "image" => "https://i5.walmartimages.com/asr/439f8d44-eda6-4578-9802-0b2737744491_6.478040aa1e6478ad5e61bcbd2ebca636.jpeg",
+        "description" => "increible fast tablet with mega power",
+        "price" => "89899"
+      ]
+
+
+    ]);
+
     }
 }

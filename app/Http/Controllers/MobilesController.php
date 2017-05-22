@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mobile;
 use Illuminate\Http\Request;
 
 class MobilesController extends Controller
@@ -13,7 +14,7 @@ class MobilesController extends Controller
      */
     public function index()
     {
-        //
+        return view("products.index");
     }
 
     /**

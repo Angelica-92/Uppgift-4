@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tablet;
 use Illuminate\Http\Request;
 
 class TabletsController extends Controller
@@ -13,7 +14,7 @@ class TabletsController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

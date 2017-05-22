@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Computer;
 use Illuminate\Http\Request;
 
 class ComputersController extends Controller

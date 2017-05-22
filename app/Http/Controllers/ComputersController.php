@@ -22,7 +22,7 @@ class ComputersController extends Controller
     public function index()
     {
         $computer = Computer::all();
-        return view("index",[
+        return view("products.index",[
           "computers" => $computers
         ]);
     }
@@ -34,7 +34,7 @@ class ComputersController extends Controller
      */
     public function create()
     {
-        return view ("create");
+        return view ("products.create");
     }
 
     /**
@@ -80,7 +80,7 @@ class ComputersController extends Controller
         $computer = Computer::find($id);
         $computer->stores = $computer->stores;
         $computer->reviews = $computer->reviews;
-        return view("show", [
+        return view("products.show", [
           "computer" => $computer
         ]);
 
@@ -95,7 +95,7 @@ class ComputersController extends Controller
     public function edit($id)
     {
         $computer = Computer::find($id);
-        return view("edit", [
+        return view("products.edit", [
           "computer" => $computer
         ]);
 

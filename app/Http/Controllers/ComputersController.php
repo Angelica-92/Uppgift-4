@@ -21,7 +21,7 @@ class ComputersController extends Controller
 
     public function index()
     {
-        $computer = Computer::all();
+        $computers = Computer::all();
         return view("products.index",[
           "computers" => $computers
         ]);

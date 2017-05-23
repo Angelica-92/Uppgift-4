@@ -39,7 +39,7 @@
   <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
 </div>
 <div class="form-group">
-<label for="rating">Välj ett betyg:<span class="glyphicon glyphicon-star"></span></label>
+<label for="rating">Välj ett betyg:</label>
 <select type="number" class="form-control" id="rating" name="rating">
   <option>1</option>
   <option>2</option>

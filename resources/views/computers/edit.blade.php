@@ -4,9 +4,9 @@
 @section('content')
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
-  <div class="col-md-4">
+  <div class="col-md-8">
     <h2>Redigera {{ $computer->title }}</h2>
 
   <form action="/computers/{{ $computer->id }}" method="post">
@@ -35,7 +35,7 @@
     <input type="submit" value="Spara dator" class="btn btn-success">
   </form>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-2">
   </div>
 </div>
 

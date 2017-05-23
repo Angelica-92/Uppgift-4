@@ -28,11 +28,35 @@
 
   </div>
 </div>
+
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <div class="form-group">
+  <label for="comment">Kommentar:</label>
+  <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+</div>
+<div class="form-group">
+<label for="rating">Välj ett betyg:</label>
+<select type="number" class="form-control" id="rating" name="rating">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</div>
+  <input type="submit" value="Spara product" class="btn btn-success" style="float:right;"><p></p>
+  </form>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
     <div class="space">
     </div>
   </div>
-</div>
-
+  </div>
 @endsection

@@ -9,7 +9,7 @@
   <div class="col-md-4">
     <h2>Redigera {{ $computer->title }}</h2>
 
-    <form action="/computers/{{ $computer->id }}" method="post">
+  <form action="/computers/{{ $computer->id }}" method="post">
   <input type="hidden" name="_method" value="PUT">
     {{ csrf_field() }}
     <div class="form-group">
@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
       <label for="title">Märke</label>
-      <input type="text" class="form-control" id="album" name="album" value="{{ $computer->brand }}" placeholder="{{ $computer->brand }}">
+      <input type="text" class="form-control" id="brand" name="brand" value="{{ $computer->brand }}" placeholder="{{ $computer->brand }}">
     </div>
     <div class="form-group">
       <label for="price">Pris</label>

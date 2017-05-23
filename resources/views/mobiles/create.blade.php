@@ -12,7 +12,7 @@
       {{ csrf_field() }}
       <div class="form-group">
         <label for="title">Titel</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Skriv artist här...">
+        <input type="text" class="form-control" id="title" name="title" placeholder="Skriv titel här...">
       </div>
       <div class="form-group">
         <label for="title">Märke</label>

@@ -12,8 +12,8 @@
         <img src="{{ $tablet->image }}" alt="{{ $tablet->title }}" style="width:100%;">
         <div class="caption">
           <p class="title"> {{ $tablet->price }} </p>
-          <p class="title">{{$tablet->brand}}</p>
-          <p>{{$tablet->description}}</p>
+          <p class="title">{{ $tablet->brand }}</p>
+          <p>{{ $tablet->description }}</p>
         </div>
       </a>
     </div>

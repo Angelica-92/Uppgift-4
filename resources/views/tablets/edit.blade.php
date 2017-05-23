@@ -25,7 +25,7 @@
       <input type="number" class="form-control" id="price" name="price" value="{{ $tablet->price }}" placeholder="{{ $tablet->price }}">
     </div>
     <div class="form-group">
-      <label for="comment">Beskrivning:</label>
+      <label for="description">Beskrivning:</label>
       <textarea class="form-control" rows="5" id="description" name="description" value="{{ $tablet->description }}" placeholder="{{ $tablet->description }}"></textarea>
     </div>
     <div class="form-group">

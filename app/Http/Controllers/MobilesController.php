@@ -79,8 +79,8 @@ class MobilesController extends Controller
     public function show($id)
     {
         $mobile = Mobile::find($id);
-        //$mobile->stores = $mobile->stores;
-        //$mobile->reviews = $mobile->reviews;
+        $mobile->stores = $mobile->stores;
+        $mobile->reviews = $mobile->reviews;
         return view("mobiles.show", [
           "mobile" => $mobile
         ]);

@@ -53,7 +53,7 @@ class TabletsController extends Controller
         $tablet->price = $request->get("price");
         $tablet->save();
 
-        /*$product_id = DB::connection()->getPdo()->lastInsertId();
+        $product_id = DB::connection()->getPdo()->lastInsertId();
               foreach ($request->get("stores") as $store) {
                   DB::table('product_store')->insert(
                     [
@@ -62,7 +62,7 @@ class TabletsController extends Controller
                     ]
                   );
               }
-              */
+
 
 
        return redirect()-> action('TabletsController@index')->with('status', 'Tablet saved');

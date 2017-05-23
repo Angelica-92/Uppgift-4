@@ -45,7 +45,7 @@ class MobilesController extends Controller
      */
     public function store(Request $request)
     {
-        $mobile = new Computer;
+        $mobile = new Mobile;
         $mobile->title = $request->get("title");
         $mobile->brand = $request->get("brand");
         $mobile->image = $request->get("image");
@@ -53,7 +53,7 @@ class MobilesController extends Controller
         $mobile->price = $request->get("price");
         $mobile->save();
 
-        /*$product_id = DB::connection()->getPdo()->lastInsertId();
+        $product_id = DB::connection()->getPdo()->lastInsertId();
               foreach ($request->get("stores") as $store) {
                   DB::table('product_store')->insert(
                     [
@@ -62,7 +62,7 @@ class MobilesController extends Controller
                     ]
                   );
               }
-              */
+
 
 
        return redirect()-> action('MobilesController@index')->with('status', 'Mobile saved');
@@ -78,8 +78,8 @@ class MobilesController extends Controller
     public function show($id)
     {
         $mobile = Mobile::find($id);
-        $mobile->stores = $mobile->stores;
-        $mobile->reviews = $mobile->reviews;
+        //$mobile->stores = $mobile->stores;
+        //$mobile->reviews = $mobile->reviews;
         return view("mobiles.show", [
           "mobile" => $mobile
         ]);

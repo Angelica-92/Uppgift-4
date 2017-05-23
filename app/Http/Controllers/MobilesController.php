@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Mobile;
+use App\Store;
 
 class MobilesController extends Controller
 {
@@ -53,9 +54,9 @@ class MobilesController extends Controller
         $mobile->price = $request->get("price");
         $mobile->save();
 
-        $product_id = DB::connection()->getPdo()->lastInsertId();
+      /*  $product_id = DB::connection()->getPdo()->lastInsertId();
               foreach ($request->get("stores") as $store) {
-                  DB::table('product_store')->insert(
+                  DB::table('product_id')->insert(
                     [
                       "product_id" => $product_id,
                       "store_id" => $store
@@ -63,7 +64,7 @@ class MobilesController extends Controller
                   );
               }
 
-
+*/
 
        return redirect()-> action('MobilesController@index')->with('status', 'Mobile saved');
 

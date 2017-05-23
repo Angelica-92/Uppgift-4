@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Tablet;
+use App\Store;
 
 class TabletsController extends Controller
 {
@@ -53,16 +54,16 @@ class TabletsController extends Controller
         $tablet->price = $request->get("price");
         $tablet->save();
 
-        $product_id = DB::connection()->getPdo()->lastInsertId();
+        /*$product_id = DB::connection()->getPdo()->lastInsertId();
               foreach ($request->get("stores") as $store) {
-                  DB::table('product_store')->insert(
+                  DB::table('product_id')->insert(
                     [
                       "product_id" => $product_id,
                       "store_id" => $store
                     ]
                   );
               }
-
+*/
 
 
        return redirect()-> action('TabletsController@index')->with('status', 'Tablet saved');
@@ -78,8 +79,8 @@ class TabletsController extends Controller
     public function show($id)
     {
         $tablet = Tablet::find($id);
-        $tablet->stores = $tablet->stores;
-        $tablet->reviews = $tablet->reviews;
+        //$tablet->stores = $tablet->stores;
+        //$tablet->reviews = $tablet->reviews;
         return view("tablets.show", [
           "tablet" => $tablet
         ]);
@@ -113,7 +114,7 @@ class TabletsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $tablet = Mobile::find($id);
+        $tablet = Tablet::find($id);
         $tablet->title = $request->get("title");
         $tablet->brand = $request->get("brand");
         $tablet->price = $request->get("price");

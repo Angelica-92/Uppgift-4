@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Computer;
+use App\Store;
 
 class ComputersController extends Controller
 {
@@ -53,16 +54,16 @@ class ComputersController extends Controller
         $computer->price = $request->get("price");
         $computer->save();
 
-        $product_id = DB::connection()->getPdo()->lastInsertId();
+        /*$product_id = DB::connection()->getPdo()->lastInsertId();
               foreach ($request->get("stores") as $store) {
-                  DB::table('product_store')->insert(
+                  DB::table('product_id')->insert(
                     [
                       "product_id" => $product_id,
                       "store_id" => $store
                     ]
                   );
               }
-
+*/
 
 
        return redirect()-> action('ComputersController@index')->with('status', 'Computer saved');
@@ -78,8 +79,8 @@ class ComputersController extends Controller
     public function show($id)
     {
         $computer = Computer::find($id);
-        $computer->stores = $computer->stores;
-        $computer->reviews = $computer->reviews;
+        //$computer->stores = $computer->stores;
+        //$computer->reviews = $computer->reviews;
         return view("computers.show", [
           "computer" => $computer
         ]);

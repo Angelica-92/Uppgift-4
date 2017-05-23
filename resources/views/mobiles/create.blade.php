@@ -8,7 +8,7 @@
   </div>
   <div class="col-md-8">
     <h2>Skapa en mobil</h2>
-    <form action="/computers" method="post">
+    <form action="/mobiles" method="post">
       {{ csrf_field() }}
       <div class="form-group">
         <label for="title">Titel</label>

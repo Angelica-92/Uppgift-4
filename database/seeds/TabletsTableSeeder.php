@@ -34,9 +34,16 @@ class TabletsTableSeeder extends Seeder
         "image" => "https://i5.walmartimages.com/asr/439f8d44-eda6-4578-9802-0b2737744491_6.478040aa1e6478ad5e61bcbd2ebca636.jpeg",
         "description" => "increible fast tablet with mega power",
         "price" => "89899"
+      ],
+      [
+        "title" => "Huawei Mediapad M3 8.4 32GB 4G ",
+        "Brand" => "Huawei",
+        "image" => "https://www.komplett.se/img/p/400/aaa5d1f3-54dd-3f70-c8d4-26335b9c7797.jpg",
+        "description" => "increible fast tablet with mega power",
+        "price" => "2000"
       ]
 
-
+      
     ]);
 
     }

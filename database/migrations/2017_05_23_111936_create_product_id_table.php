@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsIdTable extends Migration
+class CreateProductIdTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,12 @@ class CreateProductsIdTable extends Migration
      */
     public function up()
     {
-        //
+      Schema::create('product_id', function (Blueprint $table) {
+      $table->increments('id');
+      $table->integer('product_id');
+      $table->integer('store_id');
+      $table->timestamps();
+  });
     }
 
     /**
@@ -23,6 +28,6 @@ class CreateProductsIdTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('product_id');
     }
 }

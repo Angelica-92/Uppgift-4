@@ -26,7 +26,23 @@ class ComputersTableSeeder extends Seeder
           "image" => "http://www.resourcesforlife.com/wp/wp-content/uploads/2008/03/20090606sa-apple-imac-desktop-computer.jpg",
           "description" => "en fantastik dator för att kolla film på",
           "price" => 5999
+      ],
+      [
+          "title" => "MacBook Pro",
+          "brand" => "Apple",
+          "image" => "https://www.netonnet.se/files/Content/info/Apple_MacBookPro/239422.jpg",
+          "description" => "en fantastik dator för den som är grafisk designer",
+          "price" => 5999
+      ],
+      [
+          "title" => "Is-50000",
+          "brand" => "Apple",
+          "image" => "",
+          "description" => "en fantastik dator för att kolla film på",
+          "price" => 5999
       ]
+
+
 
   ]);
     }

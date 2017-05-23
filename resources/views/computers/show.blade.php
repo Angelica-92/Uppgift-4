@@ -55,10 +55,18 @@
   </div>
 </div>
 <div class="row">
-    <div class="col-md-12">
-    <div class="space">
-    </div>
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6">
+    @foreach($computer->reviews as $review)
+      <div class="panel panel-default">
+        <div class="panel-heading">{{ $review->name }} {{ $review->grade }}</div>
+        <div class="panel-body">{{ $review->comment }}</div>
+      </div>
+    @endforeach
+  </div>
+  <div class="col-md-3">
   </div>
   </div>
-
+  
 @endsection

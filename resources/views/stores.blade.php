@@ -4,24 +4,24 @@
 @section('content')
 
 <div class="row">
-  <div class="col-md-2">
+  <div class="col-md-1">
   </div>
-  <div class="col-md-8">
-    <h2>Surfplattor</h2>
+  <div class="col-md-10">
+
     @if (session('success'))
       <div class="alert alert-info" role="alert">{{ session('status') }}</div>
     @endif
     <br>
     <br>
+     <h2>Du hittar produkterna i butikerna</h2>
      @foreach($stores as $store)
-     <div class="media">
-       <h2>Du hittar produkterna i butikerna</h2>
-       <h4> {{ $store->name }} </h4>
-       <p>{{ $store->city }}</p>
-     </div>
+
+       <li> {{ $store->name }}, {{ $store->city }} </li>
+
+
      @endforeach
   </div>
-  <div class="col-md-2">
+  <div class="col-md-1">
   </div>
 </div>
 <div class="row">

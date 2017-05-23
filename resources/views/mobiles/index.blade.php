@@ -8,12 +8,13 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
-    <h2>Mobiler</h2>
+
     @if (session('success'))
       <div class="alert alert-info" role="alert">{{ session('status') }}</div>
     @endif
     <br>
     <br>
+    <h2>Mobiler</h2>
      @foreach($mobiles as $mobile)
      <div class="media">
        <img src="{{ $mobile->image }}" alt="{{ $mobile->title }}" style="width:200px;height:170px;">

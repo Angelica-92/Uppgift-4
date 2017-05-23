@@ -18,7 +18,7 @@
     </div>
     <div class="form-group">
       <label for="title">Märke</label>
-      <input type="text" class="form-control" id="album" name="album" value="{{ $tablet->brand }}" placeholder="{{ $tablet->brand }}">
+      <input type="text" class="form-control" id="brand" name="brand" value="{{ $tablet->brand }}" placeholder="{{ $tablet->brand }}">
     </div>
     <div class="form-group">
       <label for="price">Pris</label>

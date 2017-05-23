@@ -7,9 +7,17 @@
   <div class="col-md-1">
   </div>
   <div class="col-md-10">
+    <br>
+    <br>
     <h2 class="head">Mobiler</h2>
+  
       <div class="media">
       </div>
+      <div class="media">
+      </div>
+      <div class="media">
+      </div>
+  </div>
   </div>
   <div class="col-md-1">
   </div>
@@ -28,14 +36,14 @@
 </div>
 
 <div class="row">
-  <div class="col-md-2">
+  <div class="col-md-1">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-10">
     <h2 class="head">Datorer</h2>
     <div class="media">
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-1">
   </div>
 </div>
 

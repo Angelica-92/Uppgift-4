@@ -13,7 +13,7 @@
     @endif
     <br>
     <br>
-    <h1>HEJ HEJ HEJ</h1>
+  
     <h2>Surfplattor</h2>
      @foreach($tablets as $tablet)
      <div class="media">

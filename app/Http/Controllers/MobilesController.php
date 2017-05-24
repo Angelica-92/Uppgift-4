@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Mobile;
 use App\Store;
+use App\Review;
+
 
 class MobilesController extends Controller
 {
@@ -79,8 +81,10 @@ class MobilesController extends Controller
     public function show($id)
     {
         $mobile = Mobile::find($id);
+        
         return view("mobiles.show", [
-          "mobile" => $mobile
+          "mobile" => $mobile,
+          "review" => $reviews
         ]);
 
     }

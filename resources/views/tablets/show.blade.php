@@ -36,6 +36,8 @@
   <div class="col-md-2">
   </div>
   <div class="col-md-8">
+    <form action="/mobiles" method="post">
+      {{ csrf_field() }}
     <div class="form-group">
       <label for="title">Namn</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Skriv namn här...">

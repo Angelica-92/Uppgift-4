@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Tablet;
+use App\Review;
 use App\Store;
 
 class TabletsController extends Controller
@@ -79,10 +80,13 @@ class TabletsController extends Controller
     public function show($id)
     {
         $tablet = Tablet::find($id);
+        $review = Review::tablet();
+
         //$tablet->stores = $tablet->stores;
         //$tablet->reviews = $tablet->reviews;
         return view("tablets.show", [
-          "tablet" => $tablet
+          "tablet" => $tablet,
+          "review" => $review
         ]);
 
     }

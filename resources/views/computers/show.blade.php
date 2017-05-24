@@ -35,6 +35,10 @@
   </div>
   <div class="col-md-8">
     <div class="form-group">
+      <label for="title">Namn</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Skriv namn här...">
+  </div>
+    <div class="form-group">
   <label for="comment">Kommentar:</label>
   <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
 </div>
@@ -55,9 +59,9 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-3">
+  <div class="col-md-2">
   </div>
-  <div class="col-md-6">
+  <div class="col-md-8">
     @foreach($reviews as $review)
       <div class="panel panel-default">
         <div class="panel-heading">{{ $review->name }} {{ $review->grade }}</div>
@@ -65,7 +69,7 @@
       </div>
     @endforeach
   </div>
-  <div class="col-md-3">
+  <div class="col-md-2">
   </div>
   </div>
 

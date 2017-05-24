@@ -34,6 +34,10 @@
   </div>
   <div class="col-md-8">
     <div class="form-group">
+      <label for="title">Namn</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Skriv namn här...">
+  </div>
+    <div class="form-group">
   <label for="comment">Kommentar:</label>
   <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
 </div>

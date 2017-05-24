@@ -12,9 +12,9 @@ final class Mobiletest extends TestCase
       //  $utils = new Utils();
       //  $this->assertEquals("Axel", $utils->get_name(1981, 6, 16));
     }
-    public function firsttest()
+    public function testGetInputWithValidValue()
     {
-      $mobile = new Mobile();
-      $this->assertTrue($mobile->create(2));
+      $mobile = new MobilesController();
+      $this->assertEquals("");
     }
 }

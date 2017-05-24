@@ -30,6 +30,8 @@
   <div class="col-md-2">
 
   </div>
+  <br>
+  <br>
   <div class="row">
     <div class="col-md-3">
     </div>
@@ -59,12 +61,13 @@
     <div class="col-md-3">
     </div>
     <div class="col-md-6">
+
       @foreach($reviews as $review)
         <div class="panel panel-default">
           <div class="panel-heading">{{ $review->name }} {{ $review->grade }}</div>
           <div class="panel-body">{{ $review->comment }}</div>
         </div>
-      @endforeach
+
     </div>
     <div class="col-md-3">
     </div>

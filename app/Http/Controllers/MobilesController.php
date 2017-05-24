@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Mobile;
 use App\Review;
 use App\Store;
+use App\Review;
+
 
 class MobilesController extends Controller
 {
@@ -81,10 +83,17 @@ class MobilesController extends Controller
     {
 
         $mobile = Mobile::find($id);
+<<<<<<< HEAD
         $reviews = Review::where('product_id','=',$mobile->id)->where('type','mobile')->get();
         return view("mobiles.show", [
           "mobile" => $mobile,
           "reviews" => $reviews
+=======
+        
+        return view("mobiles.show", [
+          "mobile" => $mobile,
+          "review" => $reviews
+>>>>>>> 2cabf2c450009f433e062423652dacdf59455350
         ]);
 
     }

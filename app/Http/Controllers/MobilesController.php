@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Mobile;
 use App\Review;
 use App\Store;
-use App\Review;
+
 
 
 class MobilesController extends Controller

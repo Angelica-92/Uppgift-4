@@ -67,7 +67,7 @@
           <div class="panel-heading">{{ $review->name }} {{ $review->grade }}</div>
           <div class="panel-body">{{ $review->comment }}</div>
         </div>
-
+        @endforeach
     </div>
     <div class="col-md-3">
     </div>

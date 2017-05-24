@@ -9,6 +9,7 @@
   <div class="col-md-8">
     <div class="mobile">
       <h2>{{ $tablet->title }} </h2>
+      <br>
         <img src="{{ $tablet->image }}" alt="{{ $tablet->title }}" style="width:100%;">
         <div class="caption">
           <p class="title"> {{ $tablet->price }} kr</p>
@@ -17,6 +18,8 @@
         </div>
       </a>
     </div>
+    <br>
+    <b
     <a href="/tablets/{{ $tablet->id }}/edit" class="btn btn-primary btn-sm" style="float:right; color:white; margin-left:10;">Uppdatera</a>
       <form action="/tablets/{{ $tablet->id }}" method="post" style="float:right">
         {{ method_field('DELETE') }}

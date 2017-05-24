@@ -3,13 +3,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
-  public function products() {
-    return $this->belongsToMany('App\Mobile');
+  public function mobile() {
+    return $this->hasOne('App\Mobile');
 }
-  public function products() {
-    return $this->belongsToMany('App\Tablet');
+  public function tablet() {
+    return $this->hasOne('App\Tablet');
 }
-  public function products() {
-    return $this->belongsToMany('App\Tablet');
+  public function computer() {
+    return $this->hasOne('App\Computer');
 }
 }

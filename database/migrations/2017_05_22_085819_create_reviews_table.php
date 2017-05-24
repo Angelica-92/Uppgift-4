@@ -19,6 +19,7 @@ class CreateReviewsTable extends Migration
           $table->string("comment");
           $table->integer("grade");
           $table->integer("product_id");
+          $table->string("type");
           $table->timestamps();
 
         });

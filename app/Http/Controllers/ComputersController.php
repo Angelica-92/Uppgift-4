@@ -1,8 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Computer;
+
 use Illuminate\Http\Request;
+
+use App\Computer;
+use App\Review;
+use App\Store;
 
 class ComputersController extends Controller
 {
@@ -11,9 +15,18 @@ class ComputersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+         {
+            //   $this->middleware('auth', ['except' => ['index','show']]);
+         }
+
     public function index()
     {
-        //
+        $computers = Computer::all();
+        return view("computers.index",[
+          "computers" => $computers
+        ]);
     }
 
     /**
@@ -23,7 +36,7 @@ class ComputersController extends Controller
      */
     public function create()
     {
-        //
+        return view ("computers.create");
     }
 
     /**
@@ -34,7 +47,28 @@ class ComputersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $computer = new Computer;
+        $computer->title = $request->get("title");
+        $computer->brand = $request->get("brand");
+        $computer->image = $request->get("image");
+        $computer->description = $request->get("description");
+        $computer->price = $request->get("price");
+        $computer->save();
+
+        /*$product_id = DB::connection()->getPdo()->lastInsertId();
+              foreach ($request->get("stores") as $store) {
+                  DB::table('product_id')->insert(
+                    [
+                      "product_id" => $product_id,
+                      "store_id" => $store
+                    ]
+                  );
+              }
+*/
+
+
+       return redirect()-> action('ComputersController@index')->with('status', 'Computer saved');
+
     }
 
     /**
@@ -45,7 +79,14 @@ class ComputersController extends Controller
      */
     public function show($id)
     {
-        //
+        $computer = Computer::find($id);
+        $reviews = Review::where('product_id','=',$computer->id)->where('type','computer')->get();
+        return view("computers.show", [
+          "computer" => $computer,
+          "reviews" => $reviews
+
+        ]);
+
     }
 
     /**
@@ -56,7 +97,14 @@ class ComputersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $computer = Computer::find($id);
+        return view("computers.edit", [
+          "computer" => $computer
+        ]);
+
+
+
+        return redirect()->action('ComputersController@index')->with('status', 'Computer updated');
     }
 
     /**
@@ -68,7 +116,17 @@ class ComputersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $computer = Computer::find($id);
+        $computer->title = $request->get("title");
+        $computer->brand = $request->get("brand");
+        $computer->price = $request->get("price");
+        $computer->description = $request->get("description");
+        $computer->image = $request->get("image");
+        $computer->save();
+
+
+        return redirect()-> action('ComputersController@index')->with('status', 'Computer updated');
+
     }
 
     /**
@@ -79,6 +137,7 @@ class ComputersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Computer::destroy($id);
+        return redirect()->action('ComputersController@index')->with('status', 'Computer deleted');
     }
 }

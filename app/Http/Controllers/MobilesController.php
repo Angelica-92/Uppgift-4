@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Mobile;
+use App\Review;
 use App\Store;
 
 class MobilesController extends Controller
@@ -78,9 +79,12 @@ class MobilesController extends Controller
      */
     public function show($id)
     {
+
         $mobile = Mobile::find($id);
+        $reviews = Review::where('product_id','=',$mobile->id)->where('type','mobile')->get();
         return view("mobiles.show", [
-          "mobile" => $mobile
+          "mobile" => $mobile,
+          "reviews" => $reviews
         ]);
 
     }

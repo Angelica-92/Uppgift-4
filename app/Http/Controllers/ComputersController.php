@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Computer;
+use App\Review;
 use App\Store;
 
 class ComputersController extends Controller
@@ -79,10 +80,11 @@ class ComputersController extends Controller
     public function show($id)
     {
         $computer = Computer::find($id);
-        //$computer->stores = $computer->stores;
-        //$computer->reviews = $computer->reviews;
+        $reviews = Review::where('product_id','=',$computer->id)->where('type','computer')->get();
         return view("computers.show", [
-          "computer" => $computer
+          "computer" => $computer,
+          "reviews" => $reviews
+
         ]);
 
     }

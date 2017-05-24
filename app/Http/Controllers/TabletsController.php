@@ -80,13 +80,14 @@ class TabletsController extends Controller
     public function show($id)
     {
         $tablet = Tablet::find($id);
-        $review = Review::tablet();
+        $reviews = Review::where('product_id','=',$tablet->id)->where('type','tablet')->get();
+
 
         //$tablet->stores = $tablet->stores;
         //$tablet->reviews = $tablet->reviews;
         return view("tablets.show", [
           "tablet" => $tablet,
-          "review" => $review
+          "reviews" => $reviews
         ]);
 
     }

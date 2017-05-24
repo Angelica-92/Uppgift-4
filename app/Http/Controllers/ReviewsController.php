@@ -24,6 +24,7 @@ class ReviewsController extends Controller
     $review->grade = $request->get("grade");
     $review->comment = $request->get("comment");
     $review->product_id = $request->get("product_id");
+    $review->type = $request->get("type");
     $review->save();
     return redirect()->action('HomeController@index', ['id' =>   $review->product_id])->with('status', 'Comment saved!');
   }

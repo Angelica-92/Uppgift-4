@@ -19,15 +19,13 @@
 </div class="col-md-1">
 <div class="col-md-10">
 
-<div class="container" style="width: 500px;">
-  <h4>Nya album</h4>
+<div class="container" style="width: 700px;">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-    <
   </ol>
 
   <!-- Wrapper for slides -->
@@ -42,7 +40,7 @@
     </div>
 
     <div class="item">
-      <img src="https://www.att.com/catalog/en/skus/images/samsung-galaxy%20s7-black%20onyx-450x350.png" alt="Galaxy s7" style="width:100%;">
+      <img src="https://www.att.com/catalog/en/skus/images/samsung-galaxy%20s7-black%20onyx-450x350.png" alt="Galaxy s7" style="width:80%;">
       <div class="carousel-caption">
         <h3>Galaxy s7</h3>
         <p>Kristaller</p>
@@ -50,7 +48,7 @@
     </div>
 
     <div class="item">
-      <img src="https://cdn.macrumors.com/article-new/2016/10/macbook-pro-late-2016-800x701.jpg" alt="MacBook Pro" style="width:100%;">
+      <img src="https://cdn.macrumors.com/article-new/2016/10/macbook-pro-late-2016-800x701.jpg" alt="MacBook Pro" style="width:70%;">
       <div class="carousel-caption">
         <h3>MacBook Pro</h3>
         <p></p>

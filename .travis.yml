@@ -2,13 +2,16 @@ os:
 - linux
 addons:
   ssh_known_hosts:
-  - virt961327.westeurope.cloudapp.azure.com
+
+  - Virt961327.westeurope.cloudapp.azure.com
+
 cache:
   directories:
   - "$HOME/.composer/cache"
 language: php
-php:
-- 7.0
+
+php: 7.0
+
 install:
 - composer install
 script: vendor/bin/phpunit --configuration phpunit.xml --coverage-text
